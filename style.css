@@ -1,7 +1,13 @@
+:root {
+    --primary-dark: #333;
+    --primary-light: #ededed;
+    --secondary-light: #fefefe;
+  }
+
 *{
-    margin: 0;
+    /* margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    box-sizing: border-box; */
     text-align: center;
     align-items: center;
 
@@ -16,7 +22,6 @@
 .container{
     display: flex;
     justify-content: center;
-    flex:1;
     gap: 20px;
 }
 
@@ -34,14 +39,71 @@
     padding : 20px;
     width: 160px;
     height: 60px;
+    border-radius: 10px;
+    box-shadow: rgba(129, 114, 114, 0.56) 0px 22px 70px 4px;
+
 
 }
 .draw-area{
+    display: grid;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
-    height: 400px;
+    height: 500px;
     width: 500px;
+    cursor: pointer;
 
 }
-.control-pallete .color_selector{
+.color-selector{
     border-radius: 100%;
 }
+input{
+    width: 100%;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+    outline: none;
+    border-radius: 50%;
+}
+
+input[type='color'] {
+    -webkit-appearance: none;
+    width: 80px;
+    height: 80px;
+    border: none;
+  }
+  
+  input[type='color']::-webkit-color-swatch-wrapper {
+    padding: 0;
+  }
+  
+  input[type='color']::-webkit-color-swatch {
+    border: none;
+    border-radius: 50px;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+   
+  }
+
+
+  /* Code for when button is active (pressed) */
+
+.btn.active{
+
+    background-color: var(--primary-dark);
+    color: var(--primary-light);
+  }
+
+  button:hover,
+  input[type = 'color']:hover{
+    transform: scale(1.05);
+  }
+
+  .grid-element{
+    /* background-color: #333; */
+    height: 32px;
+    width: 32px; 
+    
+  }
+  .grid-element {
+    user-select: none;
+  }
